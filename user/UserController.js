@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
-var User = require('./User');
+//var User = require('./User');
 
 // CREATES A NEW USER
 router.post('/', function (req, res) {
@@ -21,10 +21,11 @@ router.post('/', function (req, res) {
 
 // RETURNS ALL THE USERS IN THE DATABASE
 router.get('/', function (req, res) {
-    User.find({}, function (err, users) {
-        if (err) return res.status(500).send("There was a problem finding the users.");
-        res.status(200).send(users);
-    });
+    return res.send("This is samplesds node js");
+    // User.find({}, function (err, users) {
+    //     if (err) return res.status(500).send("There was a problem finding the users.");
+    //     res.status(200).send(users);
+    // });
 });
 
 // GETS A SINGLE USER FROM THE DATABASE
