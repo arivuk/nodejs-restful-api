@@ -1,0 +1,13 @@
+node{
+
+stage{
+    git clone https://github.com/arivuk/nodejs-restful-api.git
+}
+ stage{
+ ant war
+ }
+ stage{
+   mvn clean 
+   mvn package
+ }
+}
